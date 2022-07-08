@@ -6,7 +6,7 @@ console.log(Number(googol));
 console.log(BigInt(googol));
 
 // strings
-// '' and "" are similar to each other
+// '' and "" strings are similar to each other
 // methods applied on strings do not modify the original string. They always returns a new string
 
 // unicode characters
@@ -19,7 +19,7 @@ console.log(love.length);
 console.log(breakup.length);
 
 // escape sequences
-// /n -> new line, \u -> unicode
+// \n -> new line, \u -> unicode
 
 console.log('Shubham\nSuyash\nRaja');
 
@@ -47,13 +47,13 @@ console.log(str.charAt(0));
 console.log(str.charAt(9));
 
 // to find index of a character
-console.log(str.indexOf('Java'));
+console.log(str.indexOf('Java')); // first occurence
 console.log(str.indexOf(','));
 console.log(str.indexOf('Hello'));
 console.log(str.indexOf('llo'));
 
 console.log(str.indexOf('l'));
-console.log(str.lastIndexOf('l'));
+console.log(str.lastIndexOf('l')); // last occurence
 
 let str1 = '12oop21err0021';
 
@@ -61,10 +61,11 @@ console.log(str1.lastIndexOf('1'));
 console.log(str1.lastIndexOf('0'));
 console.log(str1.indexOf('1222')); // returns -1 if the character is not found
 
-// indexOf() will search for character after specified number
+// indexOf() will search for character after specified position
 console.log(str1.indexOf('op', 3));
 console.log(str1.indexOf('21', 8));
 console.log(str1.indexOf('oop', 5));
+console.log(str1.indexOf('err', 5));
 
 // startsWith(), endsWith() and includes() returns either true or false
 console.log(str.startsWith('Hello'));

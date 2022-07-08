@@ -8,7 +8,7 @@ console.log(str.trimEnd()); // from the end
 console.log(str.trim()); // from both the sides
 
 // split() converts a string into an array
-// syntax: array.split(dividerString)
+// syntax: string.split(dividerString)
 
 let str1 = 'A,B,C,Wow,No';
 console.log(str1.split(','));
@@ -21,8 +21,8 @@ console.log('22  90  0'.split('  '));
 let str2 = 'Python';
 console.log(str2.length);
 
-// padStart(mexLength, fillString) => pads string at the start
-// padEnd(mexLength, fillString) => pads string at the end
+// padStart(mexLength, fillString) => pads fillString at the start
+// padEnd(mexLength, fillString) => pads fillString at the end
 
 console.log(str2.padStart(10, '-'));
 console.log(str2.padEnd(10, '-'));
@@ -51,13 +51,13 @@ console.log(email.charAt(5));
 console.log(phone.charAt(3));
 
 // Unicode assigns a unique number to every character which is called code point
-// codePointAt(index) returns code point of a specific index
+// codePointAt(index) returns code point of character at a specific index
 
 console.log(email.codePointAt(0));
 console.log(phone.codePointAt(2));
 console.log('Hi!'.codePointAt(2));
 
-const account = acc => acc.padStart(16, 0);
+const account = acc => acc.padStart(16, '0');
 
 const acc1 = account('HDFC00123456');
 const acc2 = account('SBI0016468090');
@@ -83,5 +83,22 @@ let name = 'Shubham',
 let about = `${name} is ${age} years old and currently ${isEmployed ? '' : 'un'}employed`;
 console.log(about);
 
+// \u -> escape sequence which represents unicode character
 let unicode = '\u0051';
 console.log(unicode, unicode.length);
+
+const lang = '\u004A\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074';
+console.log(lang, lang.length);
+
+// to get raw strings with escape sequences, use String.raw
+let str3 = String.raw`\u0051`;
+console.log(str3, str3.length);
+
+let lang1 = String.raw`\u004A\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074`;
+console.log(lang1, lang1.length);
+
+let languages = `\nPython\nJava\nC\nC++\nRust\nDart`;
+console.log(languages);
+
+let languages2 = String.raw`\nPython\nJava\nC\nC++\nRust\nDart`;
+console.log(languages2, languages2.length);

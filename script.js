@@ -41,3 +41,52 @@ console.log(str.slice(8, 10));
 // slice() accepts -ve values
 console.log(str.slice(-9, -1));
 console.log(str.slice(0, -10));
+
+// to find character of a string
+console.log(str.charAt(0));
+console.log(str.charAt(9));
+
+// to find index of a character
+console.log(str.indexOf("Java"));
+console.log(str.indexOf(","));
+console.log(str.indexOf("Hello"));
+console.log(str.indexOf("llo"));
+
+console.log(str.indexOf("l"));
+console.log(str.lastIndexOf("l"));
+
+let str1 = "12oop21err0021";
+
+console.log(str1.lastIndexOf("1"));
+console.log(str1.lastIndexOf("0"));
+console.log(str1.indexOf("1222")); // returns -1 if the character is not found
+
+// indexOf() will search for character after specified number
+console.log(str1.indexOf("op", 3));
+console.log(str1.indexOf("21", 8));
+console.log(str1.indexOf("oop", 5));
+
+// startsWith(), endsWith() and includes() returns either true or false
+console.log(str.startsWith("Hello"));
+console.log(str1.startsWith("12"));
+
+console.log(str1.endsWith("0021"));
+console.log(str1.endsWith("00021"));
+
+console.log(str1.includes("ooop"));
+console.log(str1.includes("err"));
+console.log(str1.includes("12oo"));
+
+let str2 = "12oopjavaoop212oop3434";
+
+// replaces first occurence
+console.log(str2.replace("oop", "clear"));
+console.log(str2.replace("34", "💔"));
+
+// repeat(n) => repeats a string n times
+console.log(str.repeat(3));
+console.log(" repeat ".repeat(5));
+
+// concatenates two arrays
+console.log(str.concat(", Python").concat(" and Java"));
+console.log("Shubham ".concat("Purwar"));

@@ -134,7 +134,7 @@ console.log(string.valueOf());
 const string2 = new String('Fine');
 console.log(string2, string2.valueOf());
 
-// characters of strings can be accessed either by using charAt() or indices
+// characters of strings can be accessed either by using charAt() method or indices
 
 // using charAt()
 const str8 = 'Online JS course';
@@ -152,3 +152,16 @@ console.log(str9);
 
 str9 = [...str8];
 console.log(str9, str9.length);
+
+// looping over string
+let str10 = 'Python and Java';
+
+// for-of returns character
+for (const char of str10) {
+  console.log(char);
+}
+
+// for-in returns indices
+for (const index in 'Java') {
+  console.log(index);
+}

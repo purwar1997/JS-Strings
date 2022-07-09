@@ -75,7 +75,7 @@ const maskPassword = password => ''.padStart(password.length, '*');
 console.log(maskPassword('pass345'));
 console.log(maskPassword('poker345@upi'));
 
-// string interpolation: inserting variables or expression values inside an string
+// string interpolation: inserting variables or expression values inside string
 let name = 'Shubham',
   age = 24,
   isEmployed = true;
@@ -102,3 +102,10 @@ console.log(languages);
 
 let languages2 = String.raw`\nPython\nJava\nC\nC++\nRust\nDart`;
 console.log(languages2, languages2.length);
+
+// \t -> tab space
+let name3 = `\tAman`;
+console.log(name3, name3.length);
+
+name3 = String.raw`\t\t${name3}`;
+console.log(name3, name3.length);

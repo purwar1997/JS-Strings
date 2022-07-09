@@ -46,7 +46,7 @@ console.log(str.slice(0, -10));
 console.log(str.charAt(0));
 console.log(str.charAt(9));
 
-// to find index of a character
+// to find index of a character or substring
 console.log(str.indexOf('Java')); // first occurence
 console.log(str.indexOf(','));
 console.log(str.indexOf('Hello'));
@@ -88,10 +88,16 @@ console.log(str2.replace('34', '💔'));
 console.log(str.repeat(3));
 console.log(' repeat '.repeat(5));
 
-// concatenates two arrays
+// concatenates two strings
 console.log(str.concat(', Python').concat(' and Java'));
 console.log('Shubham '.concat('Purwar'));
 
-// returns value or content of a string
+// returns primitive value or content of an object
 console.log(str.valueOf());
 console.log(str1.valueOf());
+
+let str_ = 'JS is great'; // str -> primitive
+str_ = new String(str_); // str -> object
+
+console.log(str_, typeof str_);
+console.log(str_.valueOf());

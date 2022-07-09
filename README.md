@@ -1,1 +1,1 @@
-Code that demonstrates how strings, string methods and regular expressions work in JS.
+Code that demonstrates how strings and string methods work in JS.
